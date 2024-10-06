@@ -36,7 +36,7 @@ Usage: minecraft-colorscripts [OPTION] [BLOCK NAME]
 Not all blocks are available due to transparency errors. Will be fixed in the near future (or not).
 
 # Tested on
-Ubuntu with alacritry and zsh
+Ubuntu with alacritty and zsh
 
 # Author
 Axistorm
