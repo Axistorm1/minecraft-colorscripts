@@ -1,8 +1,7 @@
 #!/usr/bin/env sh
 
 SCRIPT_DIR=$( dirname -- "$( readlink -f -- "$0"; )"; )
-SCRIPT_DIR_DIR=$( dirname -- "$( readlink -f -- "$SCRIPT_DIR"; )"; )
-BLOCKS_DIR="$SCRIPT_DIR_DIR/colorscripts"
+BLOCKS_DIR="$SCRIPT_DIR/colorscripts"
 
 _help() {
     echo "Print the unicode version of minecraft blocks in your shell"
