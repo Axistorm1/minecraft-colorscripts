@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-INSTALL_DIR='usr/local/opt'
-BIN_DIR='usr/local/bin'
+INSTALL_DIR='/opt'
+BIN_DIR='/bin'
 
 sudo rm -rf $INSTALL_DIR/minecraft-colorscripts || return 1
 
