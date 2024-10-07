@@ -11,6 +11,7 @@ _help() {
     echo " -r \t Print a random block."
     echo " -l \t Print a list of all blocks."
     echo " -n NAME Print a block by name. Generally spelled like in the game."
+    echo " -w \t Print a random wool block."
 }
 
 _show_block_by_name() {

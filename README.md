@@ -30,6 +30,7 @@ Usage: minecraft-colorscripts [OPTION] [BLOCK NAME]
     -r      Print a random block.
     -l      Print a list of all blocks.
     -n NAME Print a block by name. Generally spelled like in the game.
+    -w      Print a random wool block.
 ```
 
 # Known bugs
