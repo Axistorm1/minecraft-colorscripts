@@ -26,6 +26,10 @@ _list_block_names() {
     ls -1 $BLOCKS_DIR | sed -e 's/\.txt$//'
 }
 
+_show_random_wool_block() {
+    cat $(shuf -n1 -e $BLOCKS_DIR/wool_colored*)
+}
+
 case "$#" in
     0)
         _help
@@ -40,6 +44,9 @@ case "$#" in
                 ;;
             -l)
                 _list_block_names
+                ;;
+            -w)
+                _show_random_wool_block
                 ;;
             *)
                 echo "Input error."
