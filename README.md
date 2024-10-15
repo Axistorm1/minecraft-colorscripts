@@ -31,6 +31,7 @@ Usage: minecraft-colorscripts [OPTION] [BLOCK NAME]
     -n NAME Print a block by name. Generally spelled like in the game.
     -w      Print a random wool block.
     -t      Print a random block and its name.
+    -p      Print a list of all texture packs.
 ```
 
 # Add custom textures

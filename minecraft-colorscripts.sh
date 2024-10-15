@@ -14,6 +14,7 @@ _help() {
     echo " -n NAME Print a block by name. Generally spelled like in the game."
     echo " -w \t Print a random wool block."
     echo " -t \t Print a random block and its name."
+    echo " -p \t Print a list of all texture packs."
 }
 
 _show_block_by_name() {

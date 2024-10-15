@@ -23,6 +23,13 @@ def parse_file(filename, texture_pack, path, home_dir):
 
 def parse_texture_pack(texture_pack, directory, path, home_dir):
 
+    try:
+        pack_path = f"{home_dir}/minecraft-colorscripts/colorscripts/{texture_pack}"
+        os.mkdir(pack_path)
+        print(f"Directory '{texture_pack}' created successfully.")
+    except FileExistsError:
+        print(f"Directory '{texture_pack}' already exists. Ignore this warning.")
+
     for file in directory:
         filename = Path(file).stem
         parse_file(filename, texture_pack, path, home_dir)
