@@ -1,6 +1,8 @@
 # minecraft-colorscripts
 Some scripts to print out images of minecraft to the terminal. Heavily inspired by [Pokemon-colorscripts](https://github.com/nuke-dash/pokemon-colorscripts-mac/)
 
+![Exemple of random block](https://imgur.com/g6n1hbb.png)
+
 Work in progress. Please report any bug you find.
 
 # Installation
