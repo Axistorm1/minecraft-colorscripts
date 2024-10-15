@@ -2,18 +2,13 @@
 import os
 from PIL import Image
 from pathlib import Path
+import sys
 
-home_dir = os.path.expanduser('~')
-
-path = f"{home_dir}/minecraft-colorscripts/base-textures/"
-
-dir_list = os.listdir(path)
-
-def parse_file(filename):
+def parse_file(filename, texture_pack, path, home_dir):
     img = Image.open(f"{path}/{filename}.png")
     img = img.convert('RGBA')
     pix = img.load()
-    file = open(f"{home_dir}/minecraft-colorscripts/colorscripts/{filename}.txt", "a")
+    file = open(f"{home_dir}/minecraft-colorscripts/colorscripts/{texture_pack}/{filename}.txt", "a")
 
     for x in range(img.width):
         for y in range(img.height):
@@ -26,6 +21,22 @@ def parse_file(filename):
         file.write('\n')
     return
 
-for file in dir_list:
-    filename = Path(file).stem
-    parse_file(filename)
+def parse_texture_pack(texture_pack, directory, path, home_dir):
+
+    for file in directory:
+        filename = Path(file).stem
+        parse_file(filename, texture_pack, path, home_dir)
+
+def main():
+    if not sys.argv[1]:
+        print("Invalid pack name")
+        return
+    home_dir = os.path.expanduser('~')
+    texture_pack = sys.argv[1]
+    print("Generating", texture_pack, "colorscripts.")
+    path = f"{home_dir}/minecraft-colorscripts/textures/{texture_pack}/"
+    dir_list = os.listdir(path)
+    parse_texture_pack(texture_pack, dir_list, path, home_dir)
+    print("Generated", texture_pack, "textures.")
+
+main()

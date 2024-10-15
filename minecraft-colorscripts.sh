@@ -1,7 +1,8 @@
 #!/usr/bin/env sh
 
 SCRIPT_DIR=$( dirname -- "$( readlink -f -- "$0"; )"; )
-BLOCKS_DIR="$SCRIPT_DIR/colorscripts"
+BLOCKS_DIR="$SCRIPT_DIR/colorscripts/"
+SELECTED_PACK="default"
 
 _help() {
     echo "Print the unicode version of minecraft blocks in your shell"
@@ -17,26 +18,30 @@ _help() {
 
 _show_block_by_name() {
     block_name=$1
-    cat "$BLOCKS_DIR/$block_name.txt" 2>/dev/null || echo "Invalid block"
+    cat "$BLOCKS_DIR/$SELECTED_PACK/$block_name.txt" 2>/dev/null || echo "Invalid block"
 }
 
 _show_random_block() {
-    cat $(shuf -n1 -e $BLOCKS_DIR/*)
+    cat $(shuf -n1 -e $BLOCKS_DIR/$SELECTED_PACK/*)
 }
 
 _show_random_block_n_title() {
-    block_file=$(shuf -n1 -e $BLOCKS_DIR/*)
+    block_file=$(shuf -n1 -e $BLOCKS_DIR/$SELECTED_PACK/*)
     block_name=$(basename $block_file .txt)
     _show_block_by_name $block_name
     echo $block_name
 }
 
 _list_block_names() {
-    ls -1 $BLOCKS_DIR | sed -e 's/\.txt$//'
+    ls -1 $BLOCKS_DIR/$SELECTED_PACK/ | sed -e 's/\.txt$//'
 }
 
 _show_random_wool_block() {
-    cat $(shuf -n1 -e $BLOCKS_DIR/wool_colored*)
+    cat $(shuf -n1 -e $BLOCKS_DIR/$SELECTED_PACK/wool_colored*)
+}
+
+_list_texture_packs() {
+    ls -1 $BLOCKS_DIR/
 }
 
 case "$#" in
@@ -59,6 +64,9 @@ case "$#" in
                 ;;
             -t)
                 _show_random_block_n_title
+                ;;
+            -p)
+                _list_texture_packs
                 ;;
             *)
                 echo "Input error."
