@@ -16,7 +16,6 @@ cd minecraft-colorscripts
 sudo ./install.sh
 ```
 It should be installed, if not, run the commands in the install.sh manually. You can check by running
-
 ```
 minecraft-colorscripts
 ```
@@ -36,7 +35,6 @@ Usage: minecraft-colorscripts [OPTION] [BLOCK NAME]
 
 # Add custom textures
 To add your own files or texture packs:
-
 ```
     -> Create a new folder with your textures 
     -> Execute png_reader.py [texture_pack] found in generator_scripts/ 
@@ -45,14 +43,15 @@ To add your own files or texture packs:
     -> Enjoy!!
 ```
 # Known bugs
-None. Please report any findings
+None. Please report any unexpected behaviour.
 
 # Tested on
-Ubuntu with alacritty and zsh
+Ubuntu with alacritty and zsh.
 
-# Disclaimer
-Default files are Mojang's property
-Author is not liable for any error/issue caused by the program
+# Disclaimers
+Default files are Mojang's property.
+
+Author is not liable for any error/issue caused by this program.
 
 # Author
 Axistorm
