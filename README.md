@@ -49,7 +49,12 @@ To add your own files or texture packs:
 None. Please report any unexpected behaviour.
 
 # Tested on
-Ubuntu with alacritty and zsh.
+```
+Ubuntu:  
+    -> alacritty  
+        -> zsh  
+        -> bash  
+```
 
 # Disclaimers
 Default files are Mojang's property.
