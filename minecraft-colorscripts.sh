@@ -12,6 +12,7 @@ _help() {
     echo " -l \t Print a list of all blocks."
     echo " -n NAME Print a block by name. Generally spelled like in the game."
     echo " -w \t Print a random wool block."
+    echo " -t \t Print a random block and its name."
 }
 
 _show_block_by_name() {
@@ -21,6 +22,13 @@ _show_block_by_name() {
 
 _show_random_block() {
     cat $(shuf -n1 -e $BLOCKS_DIR/*)
+}
+
+_show_random_block_n_title() {
+    block_file=$(shuf -n1 -e $BLOCKS_DIR/*)
+    block_name=$(basename $block_file .txt)
+    _show_block_by_name $block_name
+    echo $block_name
 }
 
 _list_block_names() {
@@ -48,6 +56,9 @@ case "$#" in
                 ;;
             -w)
                 _show_random_wool_block
+                ;;
+            -t)
+                _show_random_block_n_title
                 ;;
             *)
                 echo "Input error."
