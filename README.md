@@ -42,7 +42,8 @@ To add your own files or texture packs:
     -> Create a new folder in textures/ with your textures 
     -> Execute png_reader.py [texture_pack] found in generator_scripts/ 
     -> Wait for the colorscripts to be created 
-    -> Go to minecraft-colorscripts.sh and modify the SELECTED_PACK variable to the texture pack you want (default texture pack is default) 
+    -> Go to minecraft-colorscripts.sh and modify the SELECTED_PACK variable to the texture pack you want (default texture pack is default)
+    -> Run the installer
     -> Enjoy!!
 ```
 # Known bugs
