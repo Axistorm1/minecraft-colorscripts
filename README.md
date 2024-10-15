@@ -34,11 +34,25 @@ Usage: minecraft-colorscripts [OPTION] [BLOCK NAME]
     -t      Print a random block and its name.
 ```
 
+# Add custom textures
+To add your own files or texture packs:
+
+```
+    -> Create a new folder with your textures 
+    -> Execute png_reader.py [texture_pack] found in generator_scripts/ 
+    -> Wait for the colorscripts to be created 
+    -> Go to minecraft-colorscripts.sh and modify the SELECTED_PACK variable to the texture pack you want (default texture pack is default) 
+    -> Enjoy!!
+```
 # Known bugs
-Not all blocks are available due to transparency errors. Will be fixed in the near future (or not).
+None. Please report any findings
 
 # Tested on
 Ubuntu with alacritty and zsh
+
+# Disclaimer
+Default files are Mojang's property
+Author is not liable for any error/issue caused by the program
 
 # Author
 Axistorm
