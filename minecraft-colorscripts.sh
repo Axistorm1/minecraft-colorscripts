@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=$( dirname -- "$( readlink -f -- "$0"; )"; )
 BLOCKS_DIR="$SCRIPT_DIR/colorscripts/"
-SELECTED_PACK="default"
+SELECTED_PACK="default-1.8.9"
 
 _help() {
     echo "Print the unicode version of minecraft blocks in your shell"
